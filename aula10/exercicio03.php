@@ -8,26 +8,48 @@
 <body>
 <div>
     <?php
-      $n1 = isset ($_GET ["nota1"]) ?$_GET ["nota1"]:"Nota não informada";
-      $n2 = isset ($_GET ["nota2"]) ?$_GET ["nota2"]:"Nota não informada";
-
-      $media = ($n1 + $n2)/2;
-      
-      echo "A média entre $n1 e $n2 é igual a $media<br/>";
-     if ($media >= 7) {
-         $tipoAprov = "APROVADO";
-     }
-     else {
-         if ($media < 7 && $media >= 5) {
-             $tipoAprov = "RECUPERAÇÃO";
-         } else {
-               $tipoAprov = "REPROVADO";
-         }
-     }
-     echo "Situação do aluno: $tipoAprov";
-    ?></br>
-    <a href="exercicio03.html"><input type="submit" value="Voltar" id="voltar"></a>
+      $e1 = isset ($_GET ["estado"]) ?$_GET ["estado"]:"Estado não informado";
+                
+      switch ($e1) {
+        case "AC":
+        case "AP":
+        case "AM":
+        case "PA":
+        case "RR":
+        case "TO":
+            $r = "Região Norte";
+            break;
+        case "AL":    
+        case "BA":
+        case "CE":
+        case "MA":    
+        case "PB":
+        case "PE":
+        case "PI":
+        case "RN":
+        case "SE":
+            $r = "Região Nordeste";
+            break;
+        case "DF":
+        case "GO":
+        case "MT":
+        case "MS":
+            $r = "Região Centro-Oeste";
+            break;
+        case "ES":
+        case "MG":
+        case "RJ":
+        case "SP":
+            $r = "Região Sudeste";
+            break; 
+        case "PR":
+        case "RS":
+        case "SC":
+            $r = "Região Sul";
+    }
+    echo "Você mora na <span class='foco'>$r</span>"
+    ?>
+    <br/><a href="javascript:history.go(-1)" class="botao">Voltar</a>
 </div>
 </body>
 </html>
- 

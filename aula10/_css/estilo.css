@@ -44,14 +44,9 @@ span.foco {
     color: #7e050c;
 }
 
-/*
-input.botao {
-    position: relative;
-    top: 10px;
-    background-color: rgb(29,55,70);
-    box-shadow: grey 2px 2px 2px;
-    border: 0px;
-    padding: 10px;
-    font-size: 12pt;
+.botao {
+    background-color: #273747;
+    color: white;
+    padding: 8px;
+    box-shadow: 2px 2px 1px #aaaaaa;
 }
-*/
